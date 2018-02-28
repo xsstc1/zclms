@@ -1,5 +1,5 @@
 <template>
-  <div class="home-container p20">
+  <div class="home-container p20 home-content">
     <!-- <div class='dashboard-text'>name:{{name}}</div>
     <div class='dashboard-text'>role:<span v-for='role in roles' :key='role'>{{role}}</span></div> -->
     <header class="cb">
@@ -530,6 +530,8 @@ export default {
 </script>
 
 <style rel="stylesheet" lang="stylus" scoped>
+.home-content
+  margin-top 20px
 .color_whole
   color #58239a
 .color_cost

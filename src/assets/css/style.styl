@@ -107,6 +107,8 @@ input
 
 .el-message
   z-index 9999!important
+.el-table td, .el-table th
+  padding 5px 0
 
 //暂时性解决diolag 问题 https://github.com/ElemeFE/element/issues/2461
 .el-dialog
@@ -155,7 +157,7 @@ input
  border-color #32aab7!important
 .el-checkbox__inner:hover
  border-color #32aab7
-.el-checkbox__input.is-focus .el-checkbox__inner,.el-input__inner:focus
+.el-checkbox__input.is-focus .el-checkbox__inner,.el-input__inner:focus,.el-select .el-input.is-focus .el-input__inner
  border-color #32aab7
 .el-button--primary,.el-button--primary:focus
  background-color #3e5171
@@ -168,6 +170,11 @@ input
 .el-pager li.active
  background-color #324157
  border 1px solid #324157
+
+.el-form-item
+  margin-bottom 0
+.el-select-dropdown__item.selected
+  color #fff
 
 .el-table__footer-wrapper thead div, .el-table__header-wrapper thead div,.el-table th,.el-table__fixed-header-wrapper thead div
  background-color #fff
@@ -334,7 +341,7 @@ input
  display none
 .el-button--small
   font-size 13px
-.el-button--small,.el-loading-spinner .path,.el-loading-spinner .el-loading-text,.el-date-picker__header-label.active, .el-date-picker__header-label:hover, .el-picker-panel__icon-btn:hover
+.el-button--small,.el-loading-spinner .path,.el-loading-spinner .el-loading-text, .el-picker-panel__icon-btn:hover
  color #32aab7!important
  stroke #32aab7
 
@@ -343,9 +350,9 @@ input
  margin-left 35px
  margin-top 35px
  font-size 13px
-.el-date-table td.current:not(.disabled), .el-date-table td.end-date, .el-date-table td.start-date
- background-color #32aab7!important
- border-radius 50%
+// .el-date-table td.current:not(.disabled), .el-date-table td.end-date, .el-date-table td.start-date
+//  background-color #32aab7!important
+//  border-radius 50%
 .el-date-table td.today:before
  border-top .5em solid #32aab7
 .el-date-table td
@@ -360,9 +367,9 @@ input
  color #32aab7
  .el-tag__close:hover
    background-color #32aab7
-.el-date-picker
- width 260px!important
- min-width 260px!important
+// .el-date-picker
+//  width 260px!important
+//  min-width 260px!important
 .el-time-panel__content::after, .el-time-panel__content::before
    background-color #32aab7
 .el-loading-mask
@@ -421,9 +428,13 @@ input
       color #bfcbd9
       font-size 45px
       margin 25px 0 10px
-.el-month-table td.current:not(.disabled) .cell,.el-year-table td.current:not(.disabled) .cell
-  border-radius 50px
+// .el-month-table td.current:not(.disabled) .cell,.el-year-table td.current:not(.disabled) .cell
+//   border-radius 50px
+//   background-color #32aab7!important
+.el-date-table td.current:not(.disabled) span
   background-color #32aab7!important
+.el-date-table td.today span
+  color #32aab7
 .el-month-table td .cell:hover
   border-radius 50px
  // 自适应模块

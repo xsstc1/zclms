@@ -58,6 +58,9 @@ import checkQuestionSearch from '../views/monitoring/checkQuestionSearch.vue';
 /*bidding agent*/
 import biddingCompany from '../views/biddingAgent/biddingCompany.vue';
 
+/*output page*/
+import costAllOutput from '../views/outputSetting/costAllOutput.vue';
+
 // 创建一个路由器实例，并且配置路由规则
 export const mainRoutes = [{
     path: '/',
@@ -141,166 +144,167 @@ export const pagesRoutes = [{
             name: '企业文化',
             component: culture
         }]
-    }, {
-        path: '/costSetting',
+    },
+    //  {
+    //     path: '/costSetting',
+    //     redirect: 'noredirect',
+    //     name: '造价咨询',
+    //     icon: "icon-jiageprice1",
+    //     dropdown: true,
+    //     hidden: false,
+    //     component: Layout,
+    //     children: [{
+    //         path: 'projectSetting',
+    //         name: '项目管理',
+    //         component: projectSetting
+    //     }, {
+    //         path: 'singleSetting',
+    //         name: '单项工程',
+    //         component: singleSetting
+    //     }, {
+    //         path: 'overDueProject',
+    //         name: '项目逾期',
+    //         component: overDueProject
+    //     }, {
+    //         path: 'overDueSingle',
+    //         name: '单项逾期',
+    //         component: overDueSingle
+    //     }, {
+    //         path: 'costFiles',
+    //         name: '造价咨询文件',
+    //         component: costFiles
+    //     }]
+    // },
+    {
+        path: '/outputSetting',
         redirect: 'noredirect',
-        name: '造价咨询',
-        icon: "icon-jiageprice1",
+        name: '产值管理',
+        icon: "icon-emijiage",
         dropdown: true,
         hidden: false,
         component: Layout,
         children: [{
-            path: 'projectSetting',
-            name: '项目管理',
-            component: projectSetting
+            path: 'costAllOutput',
+            name: '造价产值总账',
+            component: costAllOutput
         }, {
-            path: 'singleSetting',
-            name: '单项工程',
-            component: singleSetting
+            path: 'checkQuestionSearch',
+            name: '工程代理',
+            component: checkQuestionSearch
         }, {
-            path: 'overDueProject',
-            name: '项目逾期',
-            component: overDueProject
-        }, {
-            path: 'overDueSingle',
-            name: '单项逾期',
-            component: overDueSingle
-        }, {
-            path: 'costFiles',
-            name: '造价咨询文件',
-            component: costFiles
+            path: 'biddingCompany',
+            name: '采购单位维护',
+            component: biddingCompany
         }]
     },
     // {
-    //     path: '/biddingAgent',
+    //     path: '/wholeSetting',
     //     redirect: 'noredirect',
-    //     name: '招标代理',
+    //     name: '全过程管理',
+    //     icon: "icon-guocheng",
+    //     dropdown: true,
+    //     hidden: false,
+    //     component: Layout,
+    //     children: [{
+    //         path: 'wholeProject',
+    //         name: '项目管理',
+    //         component: wholeProject
+    //     }, {
+    //         path: 'wholeSingle',
+    //         name: '单项工程',
+    //         component: wholeSingle
+    //     }, {
+    //         path: 'wholeOverDue',
+    //         name: '专业工作逾期',
+    //         component: wholeOverDue
+    //     }, {
+    //         path: 'wholeFile',
+    //         name: '全过程文件',
+    //         component: wholeFile
+    //     }, {
+    //         path: 'projectWork',
+    //         name: '项目工作',
+    //         hidden:true,
+    //         component: projectWork
+    //     }, {
+    //         path: 'leaveMessage',
+    //         name: '留言簿',
+    //         hidden:true,
+    //         component: leaveMessage
+    //     }]
+    // },
+    // {
+    //     path: '/monitoring',
+    //     redirect: 'noredirect',
+    //     name: '业务监控',
     //     icon: "icon-jiankong1",
     //     dropdown: true,
     //     hidden: false,
     //     component: Layout,
     //     children: [{
     //         path: 'singleProjectSearch',
-    //         name: '采购代理',
+    //         name: '单项工程查询',
     //         component: singleProjectSearch
     //     }, {
     //         path: 'checkQuestionSearch',
-    //         name: '工程代理',
+    //         name: '审核单问题查询',
     //         component: checkQuestionSearch
-    //     }, {
-    //         path: 'biddingCompany',
-    //         name: '采购单位维护',
-    //         component: biddingCompany
     //     }]
     // },
-    {
-        path: '/wholeSetting',
-        redirect: 'noredirect',
-        name: '全过程管理',
-        icon: "icon-guocheng",
-        dropdown: true,
-        hidden: false,
-        component: Layout,
-        children: [{
-            path: 'wholeProject',
-            name: '项目管理',
-            component: wholeProject
-        }, {
-            path: 'wholeSingle',
-            name: '单项工程',
-            component: wholeSingle
-        }, {
-            path: 'wholeOverDue',
-            name: '专业工作逾期',
-            component: wholeOverDue
-        }, {
-            path: 'wholeFile',
-            name: '全过程文件',
-            component: wholeFile
-        }, {
-            path: 'projectWork',
-            name: '项目工作',
-            hidden:true,
-            component: projectWork
-        }, {
-            path: 'leaveMessage',
-            name: '留言簿',
-            hidden:true,
-            component: leaveMessage
-        }]
-    },
-    {
-        path: '/monitoring',
-        redirect: 'noredirect',
-        name: '业务监控',
-        icon: "icon-jiankong1",
-        dropdown: true,
-        hidden: false,
-        component: Layout,
-        children: [{
-            path: 'singleProjectSearch',
-            name: '单项工程查询',
-            component: singleProjectSearch
-        }, {
-            path: 'checkQuestionSearch',
-            name: '审核单问题查询',
-            component: checkQuestionSearch
-        }]
-    },
-    {
-        path: '/',
-        redirect: '/waitList',
-        name: 'waitList',
-        component: Layout,
-        hidden: true,
-        children: [{
-            path: 'waitList',
-            name: '待办列表',
-            component: waitList
-        }]
-    },
-    {
-        path: '/messageSetting',
-        redirect: 'noredirect',
-        name: '短信管理',
-        icon: "icon-shortmessage",
-        dropdown: true,
-        hidden: false,
-        component: Layout,
-        children: [{
-            path: 'messageSend',
-            name: '短信发送',
-            component: messageSend
-        }, {
-            path: 'messageQuery',
-            name: '短信查询',
-            component: messageQuery
-        }]
-    },
-    {
-        path: '/roleSetting',
-        redirect: 'noredirect',
-        dropdown: true,
-        hidden: false,
-        name: '权限管理',
-        icon: "icon-shezhitianchong",
-        component: Layout,
-        children: [{
-                path: 'departmentAdmin',
-                name: '部门管理',
-                component: departmentAdmin
-            }, {
-                path: 'roleAdmin',
-                name: '角色管理',
-                component: roleAdmin
-            },
-            {
-                path: 'userAdmin',
-                name: '用户管理',
-                component: userAdmin
-            }
-        ]
-    }
+    // {
+    //     path: '/',
+    //     redirect: '/waitList',
+    //     name: 'waitList',
+    //     component: Layout,
+    //     hidden: true,
+    //     children: [{
+    //         path: 'waitList',
+    //         name: '待办列表',
+    //         component: waitList
+    //     }]
+    // },
+    // {
+    //     path: '/messageSetting',
+    //     redirect: 'noredirect',
+    //     name: '短信管理',
+    //     icon: "icon-shortmessage",
+    //     dropdown: true,
+    //     hidden: false,
+    //     component: Layout,
+    //     children: [{
+    //         path: 'messageSend',
+    //         name: '短信发送',
+    //         component: messageSend
+    //     }, {
+    //         path: 'messageQuery',
+    //         name: '短信查询',
+    //         component: messageQuery
+    //     }]
+    // },
+    // {
+    //     path: '/roleSetting',
+    //     redirect: 'noredirect',
+    //     dropdown: true,
+    //     hidden: false,
+    //     name: '权限管理',
+    //     icon: "icon-shezhitianchong",
+    //     component: Layout,
+    //     children: [{
+    //             path: 'departmentAdmin',
+    //             name: '部门管理',
+    //             component: departmentAdmin
+    //         }, {
+    //             path: 'roleAdmin',
+    //             name: '角色管理',
+    //             component: roleAdmin
+    //         },
+    //         {
+    //             path: 'userAdmin',
+    //             name: '用户管理',
+    //             component: userAdmin
+    //         }
+    //     ]
+    // }
 ];
 
 export default new VueRouter({

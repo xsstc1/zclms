@@ -24,7 +24,7 @@ export default {
     }
   },
   mounted() {
-    this.fatherShow()
+    // this.fatherShow()
     // //console.log("用户权限", this.userRolesMean);
     // //console.log("用户菜单", this.meanRouter)
   },
@@ -52,29 +52,29 @@ export default {
               })
             }
           }
-          // else if (ele.menuName == "招标代理") {
-          //   if (item.name == "招标代理") {
-          //     item.hidden = false;
-          //     item.children.forEach((parent) => {
-          //       parent.hidden = true;
-          //       ele.children.forEach((child) => {
-          //         if (child.menuName == "采购代理") {
-          //           if (parent.name == "采购代理") {
-          //             parent.hidden = false
-          //           }
-          //         }else if (child.menuName == "工程代理") {
-          //           if (parent.name == "工程代理") {
-          //             parent.hidden = false
-          //           }
-          //         }else if (child.menuName == "采购单位维护") {
-          //           if (parent.name == "采购单位维护") {
-          //             parent.hidden = false
-          //           }
-          //         }
-          //       })
-          //     })
-          //   }
-          // }
+          else if (ele.menuName == "产值管理") {
+            if (item.name == "招标代理") {
+              item.hidden = false;
+              item.children.forEach((parent) => {
+                parent.hidden = true;
+                ele.children.forEach((child) => {
+                  if (child.menuName == "采购代理") {
+                    if (parent.name == "采购代理") {
+                      parent.hidden = false
+                    }
+                  }else if (child.menuName == "工程代理") {
+                    if (parent.name == "工程代理") {
+                      parent.hidden = false
+                    }
+                  }else if (child.menuName == "采购单位维护") {
+                    if (parent.name == "采购单位维护") {
+                      parent.hidden = false
+                    }
+                  }
+                })
+              })
+            }
+          }
           else if (ele.menuName == "全过程管理") {
             if (item.name == "全过程管理") {
               item.hidden = false;
