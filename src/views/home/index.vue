@@ -20,7 +20,7 @@
     </div> -->
       <div class="w25 fl p0-10 mb-10 header-sub-title">
         <router-link :to="{ path: 'infoSetting/culture'}">
-          <div class="home-culture bg-color-white radius5 cb oh">
+          <div class="home-culture bg-color-white radius5 cb oh shadow">
             <div class="fl w40 tc home-icon">
               <svg class="icon f70" aria-hidden="true">
                 <use xlink:href="#icon-mind_map"></use>
@@ -39,7 +39,7 @@
       </div>
       <div class="w25 fl p0-10 mb-10 header-sub-title" v-if='userInfo.departmentName!="外部企业"'>
         <router-link :to="{ path: 'infoSetting/notice'}">
-          <div class="home-notice bg-color-white radius5 cb oh">
+          <div class="home-notice bg-color-white radius5 cb oh shadow">
             <div class="fl w40 tc home-icon">
               
               <svg class="icon f70" aria-hidden="true">
@@ -59,7 +59,7 @@
       </div>
       <div class="w25 fl p0-10 mb-10 header-sub-title" v-if='userInfo.departmentName!="外部企业"'>
         <router-link :to="{ path: 'infoSetting/inside'}">
-          <div class="home-info bg-color-white radius5 cb oh">
+          <div class="home-info bg-color-white radius5 cb oh shadow">
             <div class="fl w40 tc home-icon">
               <svg class="icon f70" aria-hidden="true">
                 <use xlink:href="#icon-safe"></use>
@@ -78,7 +78,7 @@
       </div>
       <div class="w25 fl p0-10 mb-10 header-sub-title">
         <router-link :to="{ path: 'infoSetting/honor'}">
-          <div class="home-honor bg-color-white radius5 cb oh">
+          <div class="home-honor bg-color-white radius5 cb oh shadow">
             <div class="fl w40 tc home-icon">
               <svg class="icon f70" aria-hidden="true">
                 <use xlink:href="#icon-statistics"></use>
